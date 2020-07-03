@@ -1,0 +1,24 @@
+.widget-wrap
+  margin-bottom: block-margin !important
+  @media mq-normal
+    column(main-column)
+
+.widget-title
+  color: color-default
+  text-transform: uppercase
+  font-weight: bold
+
+.widget
+  color: color-grey
+  ul, ol
+    li
+      display: inline-block
+      zoom:1
+      *display:inline
+      padding-right: .75em
+/* Having problems getting balanced white space between items
+    li:before
+      content: " | "
+    li:first-child:before
+      content: none
+ */

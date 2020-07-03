@@ -1,0 +1,50 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article animate__animated animate__zoomIn cui-typo article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+	  <%- partial('post/banner', {class_name: 'article-banner'}) %>
+      </header>
+    <% } %>
+	<div class="article-meta">
+		<%- partial('post/tag') %>
+        <%- partial('post/category') %>
+		<%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+	</div>
+	<div class="article-title">
+	  <% if (post.title && index){ %>
+	    <%- partial('post/title', {class_name: 'article-title cui-typo-h5'}) %>
+	  <% } else { %>
+	    <%- partial('post/title', {class_name: 'article-title cui-typo-h2'}) %>
+	  <% } %>
+	</div>
+    <div class="article-entry" itemprop="articleBody">
+
+      <% if (post.excerpt && index){ %>
+        <div style="color:#8195b2"><%- post.excerpt %></div>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+	<% if (post.excerpt && index){ %>
+	  
+	  <% if (theme.excerpt_link){ %>
+	    <div style="margin-top:10px;margin-left:26px;margin-bottom:20px;">
+	      <a href="<%- url_for(post.path) %>#more" class="cui-btn cui-color-o-apple cui-hover-btn"><%= theme.excerpt_link %></a>
+	    </div>
+	  <% } %>
+	<% } else { %>
+	<% } %>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

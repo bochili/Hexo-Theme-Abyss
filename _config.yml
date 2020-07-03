@@ -1,0 +1,35 @@
+# Header
+menu:
+  🏠  Home: /
+  📖  Archives: /archives
+  🙈  Friends: /friends
+  📷  Photos: /photos
+  👴  About Me: /about
+rss: /atom.xml
+
+# Content
+excerpt_link: 阅读全文
+fancybox: true
+# Blogger
+avatar: https://i.loli.net/2020/04/02/vl5RntXL8VDTu9x.jpg
+introduce: 风浪没平息，我宣告奔跑的意义
+followurl: https://github.com/bochili
+# Sidebar
+sidebar: left
+widgets:
+- blogger
+- blog_info
+- tag
+drawerwidgets:
+- blogger
+- navlist
+- blog_info
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+gauges_analytics:
+favicon: /favicon.png

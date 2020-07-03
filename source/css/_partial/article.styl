@@ -1,0 +1,285 @@
+.article
+  margin: block-margin 0
+
+.article-inner
+  @extend $block
+  overflow: hidden
+
+
+.article-date
+  @extend $block-caption
+  float: right
+
+.article-category
+  float: left
+  color: #ccc
+  text-shadow: 0 1px #fff
+  margin-left: 8px
+  &:before
+    content: "\2022"
+
+.article-category-link
+  @extend $block-caption
+  margin: 0 12px 1em
+
+.article-title
+  text-decoration: none
+  font-weight: bold
+  color: color-default
+  line-height: line-height-title
+  transition: color 0.2s
+  a&:hover
+    color: color-link
+.banner-div
+  max-height 400px
+  height 100%
+  overflow hidden
+  margin-bottom -4px
+.article-banner img
+  width 100%
+  border-top-right-radius 35px
+  border-top-left-radius 35px 
+  
+.article-meta
+  clearfix()
+  padding-left article-padding
+  padding-right article-padding
+  margin-top 20px
+  
+.article-title
+  color: color-default
+  padding: 5px 13px
+.article-entry
+  @extend $base-style
+  clearfix()
+  color: color-default
+  padding: 0 article-padding
+  line-height 30px
+  font-size 16px
+  p, table
+    line-height: line-height
+    margin: line-height 0
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+  h1, h2, h3, h4, h5, h6
+    line-height: line-height-title
+    margin: line-height-title 0
+  img, video
+    max-width: 100%
+    height: auto
+    display: block
+    margin: auto
+  iframe
+    border: none
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+  th
+    font-weight: bold
+    border-bottom: 3px solid color-border
+    padding-bottom: 0.5em
+  td
+    border-bottom: 1px solid color-border
+    padding: 10px 0
+  .pullquote
+    text-align: left
+    width: 45%
+    margin: 0
+    &.left
+      margin-left: 0.5em
+      margin-right: 1em
+    &.right
+      margin-right: 0.5em
+      margin-left: 1em
+  .caption
+    color: color-grey
+    display: block
+    font-size: 0.9em
+    margin-top: 0.5em
+    position: relative
+    text-align: center
+  // http://webdesignerwall.com/tutorials/css-elastic-videos
+  .video-container
+    position: relative
+    padding-top: (9 / 16 * 100)% // 16:9 ratio
+    height: 0
+    overflow: hidden
+    iframe, object, embed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      margin-top: 0
+
+
+.article-tag-list-item
+  float: left
+
+.article-tag-list-link
+  text-decoration none
+  &:before
+    content: "#"
+
+.article-comment-link
+  float: right
+  &:before
+    content: "\f075"
+    font-family: font-icon
+    padding-right: 8px
+
+.cui-typo a.article-tag-list-link 
+	text-decoration none
+	position relative
+	color #0A73FF
+	font-weight bold
+
+.cui-typo a.article-tag-list-link:after {
+	content: "";
+	width: 0;
+	height: 1px;
+	border-radius: 1000px;
+	position: absolute;
+	background: #0A73FF;
+	top: 100%;
+	left: 0%;
+	transition: all .4s;
+	z-index: 999;
+}
+
+.cui-typo a.article-tag-list-link:hover:after {
+	left: 0%;
+	width: 100%;
+}
+
+
+.article-entry a
+	text-decoration none
+	position relative
+	color #0A73FF
+	font-weight bold
+
+.article-entry a:after {
+	content: "";
+	width: 0;
+	height: 1px;
+	border-radius: 1000px;
+	position: absolute;
+	background: #0A73FF;
+	top: 100%;
+	left: 0%;
+	transition: all .4s;
+	z-index: 999;
+}
+
+.article-entry a:hover:after {
+	left: 0%;
+	width: 100%;
+}
+
+#article-nav
+  clearfix()
+  position: relative
+  @media mq-normal
+    margin: block-margin 0
+    &:before
+      absolute-center(8px)
+      content: ""
+      border-radius: 50%
+      background: color-border
+      box-shadow: 0 1px 2px #fff
+
+.article-nav-link-wrap
+  text-decoration: none
+  text-shadow: 0 1px #fff
+  color: color-grey
+  box-sizing: border-box
+  margin-top: block-margin
+  text-align: center
+  display: block
+  &:hover
+    color: color-default
+  @media mq-normal
+    width: 50%
+    margin-top: 0
+
+#article-nav-newer
+  @media mq-normal
+    float: left
+    text-align: right
+    padding-right: 20px
+
+#article-nav-older
+  @media mq-normal
+    float: right
+    text-align: left
+    padding-left: 20px
+
+.article-nav-caption
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: color-border
+  line-height: 1em
+  font-weight: bold
+  #article-nav-newer &
+    margin-right: -2px
+
+.article-nav-title
+  font-size: 0.85em
+  line-height: line-height
+  margin-top: 0.5em
+
+.article-gallery
+  background: #000
+  position: relative
+
+.article-gallery-photos
+  position: relative
+  overflow: hidden
+
+.article-gallery-img
+  display: none
+  max-width: 100%
+  &:first-child
+    display: block
+  &.loaded
+    position: absolute
+    display: block
+  img
+    display: block
+    max-width: 100%
+    margin: 0 auto
+/*
+$article-gallery-ctrl
+  position: absolute
+  top: 0
+  height: 100%
+  width: 60px
+  color: #fff
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+  opacity: 0.3
+  transition: opacity 0.2s
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+  &:before
+    font-size: 30px
+    font-family: font-icon
+    position: absolute
+    top: 50%
+    margin-top: @font-size * -0.5
+
+.article-gallery-prev
+  @extend $article-gallery-ctrl
+  left: 0
+  &:before
+    content: "\f053"
+    left: 15px
+
+.article-gallery-next
+  @extend $article-gallery-ctrl
+  right: 0
+  &:before
+    content: "\f054"
+    right: 15px*/

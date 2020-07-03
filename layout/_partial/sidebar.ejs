@@ -1,0 +1,23 @@
+<aside class="cui-typo" id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+	<% theme.widgets.forEach(function(widget){ %>
+		<%- partial('_widget/' + widget) %>
+	 <% }) %>
+</aside>
+<div class="cui-drawer" id="wrapper">
+
+			<div class="cui-drawer-wrapper animate__animated animate__zoomIn">
+				<aside class="cui-typo"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+					<% theme.drawerwidgets.forEach(function(widget){ %>
+						<%- partial('_widget/' + widget) %>
+					 <% }) %>
+				</aside>
+				<footer class="cui-typo widget-wrap animate__animated animate__fadeInUp">
+				    <div class="widget" id="footer-info">
+				      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+				      <%= __('powered_by') %> <a href="http://hexo.io/" class="cui-typo-a" target="_blank">Hexo</a>
+					  & <a href="http://github.com/bochili/hexo-theme-halcyon" class="cui-typo-a" target="_blank">Halcyon</a>
+				    </div>
+				</footer>
+			</div>
+			<div class="cui-drawer-overlay cui-cover-dark cui-blur" cui-drawer="open"></div>
+		</div>
