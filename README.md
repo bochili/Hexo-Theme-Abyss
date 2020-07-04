@@ -1,6 +1,8 @@
 # Hexo-Theme-Abyss
 Demo:www.wanan.run
 
+![](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/40178663-5584-435E-B9BF-CA90953154C8.png)
+
 ***文档对应的主题版本：Abyss 0.0.1***
 
 # 基本配置
