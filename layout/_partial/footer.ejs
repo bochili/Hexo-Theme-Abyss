@@ -1,4 +1,6 @@
 <script src="<%- url_for('/js/jquery-1.8.3.min.js') %>" type="text/javascript"></script>
+  <script src="<%- url_for('/js/pageloader.js') %>" type="text/javascript"></script>
+
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('[cui-drawer="open"]').click(function() {
@@ -6,3 +8,11 @@
 				});
 			});
 		</script>
+
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "<%= theme.valine.AppId %>",
+    appKey: "<%= theme.valine.AppKey %>"
+  })
+</script>

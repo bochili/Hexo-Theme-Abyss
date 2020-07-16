@@ -24,13 +24,18 @@
         <div style="color:#8195b2"><%- post.excerpt %></div>
       <% } else { %>
         <%- post.content %>
+        /* <% if (theme.sidebar == 'left'){ %>
+          <div class="post-toc toc-right"><%- toc(page.content) %></div>  
+        <% } else { %>
+          <div class="post-toc toc-left"><%- toc(page.content) %></div>
+        <% } %> */
       <% } %>
     </div>
 	<% if (post.excerpt && index){ %>
 	  
 	  <% if (theme.excerpt_link){ %>
 	    <div style="margin-top:10px;margin-left:26px;margin-bottom:20px;">
-	      <a href="<%- url_for(post.path) %>#more" class="cui-btn cui-color-o-apple cui-hover-btn"><%= theme.excerpt_link %></a>
+	      <a href="<%- url_for(post.path) %>#more" class="cui-btn<% if (theme.excerpt_link_shape == 'oval'){ %> cui-btn-oval<% } %><% if (theme.excerpt_link_shadow){ %> cui-shadow-heavy-theme<% } %> cui-color-theme cui-hover-btn"><%= theme.excerpt_link %></a>
 	    </div>
 	  <% } %>
 	<% } else { %>
@@ -47,4 +52,7 @@
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
+<% } %>
+<% if (theme.valine.enable && !index){ %>
+  <div id="vcomments"></div>
 <% } %>

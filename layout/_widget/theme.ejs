@@ -1,0 +1,53 @@
+<div class="widget-wrap animate__animated animate__fadeInUp">
+    <div class="widget">
+	  <a class="theme-dot cui-shadow-heavy-blue" style="background:#0A73FF;" onclick="changeThemeApple()"></a>&nbsp;&nbsp;
+      <a class="theme-dot cui-shadow-black" style="background:#27292b" onclick="changeThemeDark()"></a>&nbsp;&nbsp;
+	  <a class="cui-color-y-red cui-shadow-heavy-red theme-dot" onclick="changeThemeYRed()"></a>&nbsp;&nbsp;
+	  <a class="cui-color-y-yellow cui-shadow-heavy-yellow theme-dot" onclick="changeThemeYYellow()"></a>&nbsp;&nbsp;
+	  <a class="cui-color-s-green cui-shadow-heavy-green theme-dot" onclick="changeThemeSGreen()"></a>&nbsp;&nbsp;
+	  <a class="cui-color-y-purple cui-shadow-heavy-purple theme-dot" onclick="changeThemeYPurple()"></a>&nbsp;&nbsp;
+	  <a class="cui-color-l-yellow cui-shadow-heavy-yellow theme-dot" onclick="changeThemeLYellow()"></a>&nbsp;&nbsp;
+    </div>
+</div>
+<script>
+  function changedTheme(){
+      var changedThemeName = document.cookie;
+      var changedTheme = document.getElementById("page");
+	  changedTheme.className = changedThemeName;
+  }
+  function changeThemeDark(){
+    var changeThemeDark = document.getElementById("page");
+    changeThemeDark.className="cui-color-theme-dark";
+    document.cookie="cui-color-theme-dark; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+  function changeThemeApple(){
+    var changeThemeApple = document.getElementById("page");
+    changeThemeApple.className="cui-color-theme-o-apple"; 
+    document.cookie="cui-color-theme-o-apple; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+  function changeThemeYRed(){
+    var changeThemeYRed = document.getElementById("page");
+    changeThemeYRed.className="cui-color-theme-y-red";
+    document.cookie="cui-color-theme-y-red; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+  function changeThemeYYellow(){
+    var changeThemeYYellow = document.getElementById("page");
+    changeThemeYYellow.className="cui-color-theme-y-yellow";
+    document.cookie="cui-color-theme-y-yellow; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+  function changeThemeSGreen(){
+    var changeThemeSGreen = document.getElementById("page");
+    changeThemeSGreen.className="cui-color-theme-s-green";
+    document.cookie="cui-color-theme-s-green; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+  function changeThemeYPurple(){
+    var changeThemeYPurple = document.getElementById("page");
+    changeThemeYPurple.className="cui-color-theme-y-purple";
+    document.cookie="cui-color-theme-y-purple; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+  function changeThemeLYellow(){
+    var changeThemeLYellow = document.getElementById("page");
+    changeThemeLYellow.className="cui-color-theme-l-yellow";
+    document.cookie="cui-color-theme-l-yellow; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";
+  }
+</script>

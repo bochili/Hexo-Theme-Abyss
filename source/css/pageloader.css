@@ -1,0 +1,41 @@
+#bonfire-pageloader {
+	background-color:rgba(255,255,255,.6);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+}
+#bonfire-pageloader svg {
+	fill:#fff;
+}
+#bonfire-pageloader {
+	position:absolute;
+	z-index:99999999999999;
+	width:100%;
+	height:400%;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+}
+.bonfire-pageloader-fade {
+	opacity:0 !important;
+	-webkit-transition: all .75s ease;
+	-moz-transition: all .75s ease;
+	-o-transition: all .75s ease;
+	-ms-transition: all .75s ease;
+	transition: all .75s ease;
+}
+.bonfire-pageloader-hide {
+	display:none;
+}
+.bonfire-html-onload {	
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	-o-transform: translateY(-50px);
+	transform: translateY(-50px);
+	-webkit-transition: all 0s ease;
+	-moz-transition: all 0s ease;
+	-o-transition: all 0s ease;
+	-ms-transition: all 0s ease;
+	transition: all 0s ease;
+}

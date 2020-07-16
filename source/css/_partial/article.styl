@@ -5,9 +5,13 @@
   @extend $block
   overflow: hidden
 
+.cui-color-theme-dark .article-inner
+  background #2D3034
+  color #FFF
 
 .article-date
   @extend $block-caption
+  text-shadow none
   float: right
 
 .article-category
@@ -21,6 +25,9 @@
 .article-category-link
   @extend $block-caption
   margin: 0 12px 1em
+
+.cui-color-theme-dark .article-title
+  color #FFF
 
 .article-title
   text-decoration: none
@@ -52,13 +59,38 @@
 .article-entry
   @extend $base-style
   clearfix()
-  color: color-default
   padding: 0 article-padding
   line-height 30px
   font-size 16px
   p, table
     line-height: line-height
     margin: line-height 0
+  blockquote p
+    margin: 5px
+  
+  a {
+    text-decoration: none;
+    position: relative;
+    color: #0a73ff;
+  }
+  
+  a:after {
+  	content: "";
+  	width: 0;
+  	height: 1px;
+  	border-radius: 1000px;
+  	position: absolute;
+  	background: #0a73ff;
+  	top: 100%;
+  	left: 0%;
+  	transition: all .4s;
+  	z-index: 999;
+  }
+  
+  a:hover:after {
+  	left: 0%;
+  	width: 100%;
+  }
   h1, h2, h3, h4, h5, h6
     font-weight: bold
   h1, h2, h3, h4, h5, h6
@@ -129,31 +161,12 @@
     font-family: font-icon
     padding-right: 8px
 
-.cui-typo a.article-tag-list-link 
-	text-decoration none
-	position relative
-	color #0A73FF
-	font-weight bold
-
-.cui-typo a.article-tag-list-link:after {
-	content: "";
-	width: 0;
-	height: 1px;
-	border-radius: 1000px;
-	position: absolute;
-	background: #0A73FF;
-	top: 100%;
-	left: 0%;
-	transition: all .4s;
-	z-index: 999;
-}
-
 .cui-typo a.article-tag-list-link:hover:after {
 	left: 0%;
 	width: 100%;
 }
 
-
+/* 
 .article-entry a
 	text-decoration none
 	position relative
@@ -177,7 +190,7 @@
 	left: 0%;
 	width: 100%;
 }
-
+ */
 #article-nav
   clearfix()
   position: relative
@@ -222,6 +235,7 @@
   color: color-border
   line-height: 1em
   font-weight: bold
+  text-shadow none
   #article-nav-newer &
     margin-right: -2px
 
@@ -229,6 +243,7 @@
   font-size: 0.85em
   line-height: line-height
   margin-top: 0.5em
+  text-shadow none
 
 .article-gallery
   background: #000

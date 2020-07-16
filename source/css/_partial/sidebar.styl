@@ -2,7 +2,11 @@ if sidebar is bottom
   @import "sidebar-bottom"
 else
   @import "sidebar-aside"
-
+.cui-color-theme-dark .widget
+  background #2D3034
+  color #FFF
+.cui-color-theme-dark .widget-title
+  color #FFF
 .widget
   line-height: line-height
   word-wrap: break-word
@@ -96,3 +100,14 @@ a.category-list-link:hover:after,.tag-list-link:hover:after
 .navlist-active
   font-weight bold
   font-size 16px
+  
+.theme-dot
+  display inline-block
+  width 30px
+  height 30px
+  border-radius 1000px
+
+.dol-text-color
+  color #2e2f3c
+.cui-color-theme-dark .dol-text-color
+  color #FFF

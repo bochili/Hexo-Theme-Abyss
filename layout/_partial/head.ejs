@@ -20,11 +20,18 @@
     title = __('tag') + ': ' + page.tag;
   }
   %>
+  <% if (theme.baidu_search.enable){ %>
+    <meta name="baidu-site-verification" content="<%= theme.baidu_search.baidu_site_verification %>" />
+    <script>    (function(){        var bp = document.createElement('script');        var curProtocol = window.location.protocol.split(':')[0];       if (curProtocol === 'https') {            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        }        else {            bp.src = 'http://push.zhanzhang.baidu.com/push.js';        }        var s = document.getElementsByTagName("script")[0];        s.parentNode.insertBefore(bp, s);    })();   </script>
+  <% } %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %> - <%= config.subtitle %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (theme.rss){ %>
     <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.valine.enable){ %>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <% } %>
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
@@ -32,7 +39,9 @@
   <% if (config.highlight.enable){ %>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
+  <link rel="stylesheet" href="<%- url_for('/css/pageloader.css') %>" type="text/css" />
+  <script data-ad-client="<%= theme.AdSense.adclient %>" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <link href="<%- url_for('/css/cuiv3.css') %>" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="<%= url_for('/css/animate.min.css') %>" />
   <%- css('css/style') %>
   </head>

@@ -7,23 +7,37 @@ menu:
   👴  About Me: /about
 rss: /atom.xml
 
+#Theme
+theme_color: o-apple #NEW
+
+#Navbar
+nav_fixed: true #NEW
+
 # Content
 excerpt_link: 阅读全文
+excerpt_link_shape: oval #NEW
+excerpt_link_shadow: true #NEW
 fancybox: true
 # Blogger
-avatar: https://i.loli.net/2020/04/02/vl5RntXL8VDTu9x.jpg
+avatar: https://i.loli.net/2020/07/13/3ltrdaZpvzMJUXR.jpg
 introduce: 风浪没平息，我宣告奔跑的意义
 followurl: https://github.com/bochili
 # Sidebar
 sidebar: left
 widgets:
 - blogger
+- theme #NEW
 - blog_info
-- tag
+- tagcloud
 drawerwidgets:
 - blogger
+- theme
 - navlist
-- blog_info
+
+#Baidu Search Resource Platform
+baidu_search:
+  enable: true
+  baidu_site_verification: O0eImcpYTc
 
 # widget behavior
 archive_type: 'monthly'
@@ -33,3 +47,14 @@ show_count: false
 google_analytics:
 gauges_analytics:
 favicon: /favicon.png
+
+#Valine NEW
+valine:
+  enable: true
+  AppId: IOQF7YODEcwaCGUYxRXQQtUA-gzGzoHsz
+  AppKey: C1pfrlS3mX2BFU8maxcpI5zv
+  
+#Google AdSense NEW
+AdSense:
+  enable: false
+  adclient: ca-pub-4994376664948778

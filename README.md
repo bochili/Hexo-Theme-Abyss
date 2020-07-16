@@ -1,14 +1,54 @@
-# Hexo-Theme-Abyss
-Demo:www.wanan.run
+# 欢迎使用Abyss主题！
 
-![](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/40178663-5584-435E-B9BF-CA90953154C8.png)
+Abyss主题是基于Landscape主题二次开发而成，使用了其中的网格布局、归档布局等。
 
-***文档对应的主题版本：Abyss 0.0.1***
+这里我还要感谢所有为Abyss主题提出建议、发现Bug的各位，他们是Abyss主题设计开发过程中不可或缺的力量。
 
-# 基本配置
+![image](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/Abyss0.0.2.png)
+
+***文档对应的主题版本：Abyss 0.0.2***
+
+## 示例：
+Bochi's Blog: [www.wanan.run](https://www.wanan.run)
+
+如果您的站点使用了Abyss主题，欢迎通过邮箱提交链接[bochili@foxmail.com](mailto:bochili@foxmail.com)。我不会忽略任何一个站点。
+
+## 主题色
+在主题的_config.yml中找到这一行：
+
+```
+theme_color: o-apple（默认为o-apple）
+```
+主题一共提供了26种ColorfulUI V3中的配色，其中可能有辨识度较低的颜色，您可以自行尝试。
+
+深色主题色为：
+```
+theme_color: dark
+```
+
+
+![配色表](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/E3EC8A58-82A6-458E-B625-89E729A9B094.png)
+
+> 其中，o-zhihu、o-bilibili、o-xhub和white都未参与颜色联动系统。
+
+另外，0.0.2版本在侧边栏组件中新增了切换主题色的功能，此功能使用到了Cookie存储，因此引入了**预加载**，目前存在一个外观上的问题，在日后的版本更新中会将其修复。
+
+> 存在问题为：<br>① 用户在config中设置了默认的主题色，当电脑未读取到cookie时，将使用默认主题色。但是当浏览者切换了主题色，页面会先加载默认主题色，再读取cookie，加载新的主题色，中间的时间差是肉眼可见的，所以出现了切换页面时有一瞬间颜色不一致的情况。
+<br>②
+预加载阶段页面位置有问题。
+
+## 顶部导航栏是否固定
+
+在主题的_config.yml中找到
+```
+nav_fixed: true（默认为固定）
+```
+这一行，将其改为false，则不跟页面移动。
+
+
 ## 侧边栏配置
 
-侧边栏组件一共有8个：
+侧边栏组件一共有9个：
 
 组件名 | config中的对应名
 ---|---
@@ -20,6 +60,7 @@ Demo:www.wanan.run
 导航卡片 | navlist
 分类 | category
 最近文章 | recent_posts
+**切换主题色** | **theme**
 
 示例（主题的_config.yml）：
 
@@ -63,18 +104,7 @@ followurl:
 在后面添加需要跳转到的地址。
 
 ## 抽屉导航内的组件配置
-抽屉导航内的组件与侧边栏组件完全相同。一共有8个：
-
-组件名 | config中的对应名
----|---
-博主信息卡片 | blogger
-博客数据 | blog_info
-标签 | tag
-标签云 | tagcloud
-归档 | archive
-导航卡片 | navlist
-分类 | category
-最近文章 | recent_posts
+抽屉导航内的组件与侧边栏组件完全相同。一共有9个。
 
 示例（主题的_config.yml）：
 
@@ -83,20 +113,19 @@ drawerwidgets:
 - blogger
 - navlist
 - blog_info
+- theme
 ```
 
-## 主题配置
-### 字体配置
+## 阅读全文按钮
+在主题的_config.yml中找到这两行
+excerpt_link_shape的值有oval和square，一个为椭圆形一个为长方形。
+excerpt_link_shadow的值为true或false，即开启或关闭按钮上的阴影。
 
-字体配置文件位于
 ```
-博客目录/theme/abyss/source/css/style.styl
+excerpt_link_shape: oval（默认为椭圆）
+excerpt_link_shadow: true（默认为开启阴影）
 ```
-Tarawa主题内置了1个英文字体。为Google Sans
 
-可以修改字体配置文件第78行修改站点字体。
-
-**注意**：使用混搭时，应该让英文字体位于中文字体的前面，否则页面不会应用英文字体。
 
 ## 文章Front-Matter
 下面是一个标准的Front-Matter示例：
@@ -123,3 +152,24 @@ banner: https://cdn.jsdelivr.net/gh/bochili/fontscdn2/40178663-5584-435E-B9BF-CA
 ```
 ### 首页文章列表大图
 添加**banner**项，值为图片外链。
+
+## 百度搜索资源平台
+config中代码如下
+enable为是否开启，baidu_site_verification为您在下图中找到的值：
+![baidu_site_verification](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/FFB45118-C781-45CC-830C-524A2A1F516A.png)
+
+
+## Valine评论系统
+config中代码如下
+enable为是否开启，AppId和AppKey为您在LeanCloud创建的应用的对应值。
+```
+valine:
+  enable: true
+  AppId: XXXXXXXXXX
+  AppKey: XXXXXXXXXXX
+```
+
+
+## Google AdSense
+
+此版本不开启，日后版本将可以正常使用。
