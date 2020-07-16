@@ -13,7 +13,11 @@
   function changedTheme(){
       var changedThemeName = document.cookie;
       var changedTheme = document.getElementById("page");
-	  changedTheme.className = changedThemeName;
+      if( changedThemeName == "" ){
+          changedTheme.className = "cui-color-theme-<%= theme.theme_color %>";
+      }else{
+          changedTheme.className = changedThemeName;
+      }
   }
   function changeThemeDark(){
     var changeThemeDark = document.getElementById("page");

@@ -1,1 +1,23 @@
-<%- partial('_partial/archive', {pagination: config.tag, index: true}) %>
+
+  <% if (site.posts && site.posts.length > 0) { %>
+    <% if (page.layout == 'tag') { %>
+      <section class="post-list">
+        <div class='post-wrapper'>
+          <article id="archive-page" class="post article white-box">
+            <section class="archive">
+              <div class="article-title">
+                <%- page.title %>
+              </div>
+              <div>
+                <%- tagcloud(site.tags) %>
+              </div>
+              <br>
+              <%- page.content %>
+            </section>
+          </article>
+        </div>
+      </section>
+    <% } else { %>
+      <%- partial('_partial/archive', {pagination: config.tag, index: true}) %>
+    <% } %>
+  <% } %>

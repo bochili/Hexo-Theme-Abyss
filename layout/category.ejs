@@ -1,1 +1,23 @@
-<%- partial('_partial/archive', {pagination: config.category, index: true}) %>
+
+  <% if (site.posts && site.posts.length > 0) { %>
+    <% if (page.layout == 'category') { %>
+      <section class="post-list">
+        <div class='post-wrapper'>
+          <article id="archive-page" class="post article white-box">
+            <section class="archive">
+              <div class="article-title">
+                <%- page.title %>
+              </div>
+              <div>
+                <%- list_categories() %>
+              </div>
+              <br>
+              <%- page.content %>
+            </section>
+          </article>
+        </div>
+      </section>
+    <% } else { %>
+      <%- partial('_partial/archive', {pagination: config.category, index: true}) %>
+    <% } %>
+  <% } %>

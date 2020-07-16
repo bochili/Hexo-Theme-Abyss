@@ -36,11 +36,10 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
   <% } %>
-  <% if (config.highlight.enable){ %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <% if (theme.AdSense.enable){ %>
+    <script data-ad-client="<%= theme.AdSense.adclient %>" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <% } %>
   <link rel="stylesheet" href="<%- url_for('/css/pageloader.css') %>" type="text/css" />
-  <script data-ad-client="<%= theme.AdSense.adclient %>" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <link href="<%- url_for('/css/cuiv3.css') %>" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<%= url_for('/css/animate.min.css') %>" />
   <%- css('css/style') %>

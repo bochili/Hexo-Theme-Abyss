@@ -25,6 +25,7 @@
 .article-category-link
   @extend $block-caption
   margin: 0 12px 1em
+  text-shadow none
 
 .cui-color-theme-dark .article-title
   color #FFF
@@ -67,7 +68,8 @@
     margin: line-height 0
   blockquote p
     margin: 5px
-  
+  blockquote
+    margin-bottom 10px
   a {
     text-decoration: none;
     position: relative;
@@ -244,6 +246,10 @@
   line-height: line-height
   margin-top: 0.5em
   text-shadow none
+
+.cui-color-theme-dark .article-nav-title:hover
+  color #FFF
+  transition .3s all
 
 .article-gallery
   background: #000
