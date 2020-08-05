@@ -1,0 +1,40 @@
+<style>
+.loadbartop-mom{
+position:fixed;
+top:0;
+width:100%;
+height:6px;
+background:#f1f2f9;
+}
+.lobt-son{
+position: relative;
+animation:slideiugfcn 5s infinite;
+background:#ccc;
+width: 50px;
+}
+@keyframes slideiugfcn {
+ from { 
+  left:0; 
+ }
+ to { 
+  left:1000px;
+ } 
+}
+</style>
+<div class="loadbartop-mom"id="bonfire-pageloaderr">
+<div class="lobt-son">
+
+</div>
+</div>
+<script>
+jQuery(window).load(function() {	
+	setTimeout(function(){
+		jQuery(document.body).unbind('touchmove');
+		jQuery("#bonfire-pageloaderr").addClass('bonfire-pageloader-fade');
+		jQuery("html").removeClass('bonfire-html-onload');
+	},750);	
+	setTimeout(function(){
+		jQuery("#bonfire-pageloaderr").addClass('bonfire-pageloader-hide');
+	},1000);
+});
+</script>

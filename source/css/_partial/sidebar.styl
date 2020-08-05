@@ -103,11 +103,20 @@ a.category-list-link:hover:after,.tag-list-link:hover:after
   
 .theme-dot
   display inline-block
-  width 30px
-  height 30px
+  width 25px
+  height 25px
   border-radius 1000px
+  vertical-align middle
+  transition all .5s ease-in-out
+  &:hover
+    width 30px
+    height 30px
+    transition all .5s ease-in-out
+	transform scale(1.2)
 
 .dol-text-color
+  color #2e2f3c
+a.dol-text-color
   color #2e2f3c
 .cui-color-theme-dark .dol-text-color
   color #FFF

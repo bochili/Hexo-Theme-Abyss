@@ -1,21 +1,19 @@
 
   <% if (site.posts && site.posts.length > 0) { %>
     <% if (page.layout == 'tag') { %>
-      <section class="post-list">
-        <div class='post-wrapper'>
-          <article id="archive-page" class="post article white-box">
+      <section>
+          <article class="article article-inner">
             <section class="archive">
-              <div class="article-title">
+              <div class="article-title cui-typo-h2" style="padding-left: 26px;padding-right: 26px;margin-top: 40px;">
                 <%- page.title %>
               </div>
-              <div>
+              <div style="padding-left: 26px;padding-right: 26px;margin-top: 15px;margin-bottom:20px;" class="tagcloud">
                 <%- tagcloud(site.tags) %>
+                <br>
+                <%- page.content %>
               </div>
-              <br>
-              <%- page.content %>
             </section>
           </article>
-        </div>
       </section>
     <% } else { %>
       <%- partial('_partial/archive', {pagination: config.tag, index: true}) %>

@@ -422,7 +422,7 @@ body {
 .cui-color-theme-dark{
 	background: #27292B;
 }
-.cui-color-theme-dark .cui-color-theme,.cui-color-dark {
+.cui-color-theme-dark .cui-color-theme,.cui-color-dark,.cui-color-theme-dark .cui-navbar .cui-btn-icon.cui-color-theme {
 	background: #2D3034;
 	color: #FFF;
 }
@@ -534,7 +534,7 @@ body {
 }
  .cui-typo blockquote {
 	padding: 10px 10px 10px 20px;
- 	background: #FFF;
+ 	background: #f7f7f7;
  	border-left: 6px solid #d1d0d9;
  }
  .cui-color-theme-dark .cui-typo blockquote {
@@ -989,7 +989,7 @@ body {
 	border-radius: 15px;
 	overflow-y: auto;
 	width: 0;
-	z-index: 10000;
+	z-index: 9999999;
 }
 .cui-dialog-wrapper::-webkit-scrollbar {
 	width: 5px;
@@ -1013,7 +1013,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 50%;
-	z-index: 9999;
+	z-index: 999999;
 	-moz-transition: all 0.4s cubic-bezier(1, .19, 0, .81);
 	-o-transition: all 0.4s cubic-bezier(1, .19, 0, .81);
 	-webkit-transition: all 0.4s cubic-bezier(1, .19, 0, .81);
@@ -1050,12 +1050,15 @@ body {
 	text-decoration: none;
 	display: inline-block;
 }
+.cui-hover-btn{
+	transition: all .4s;
+}
 .cui-hover-btn:hover{
 	-webkit-opacity: 70%;
 	opacity: 70%;
 	transition: all .4s;
 }
-.cui-color-theme-dark .cui-btn.cui-color-theme{
+.cui-color-theme-dark .cui-btn.cui-color-theme,.cui-color-theme-dark .cui-btn-icon.cui-color-theme{
 	background-color: #3e3e48;
 }
 /*CARD PART*/
@@ -1152,4 +1155,30 @@ body {
 	.cui-card-float-top-text-content,.cui-card-float-bottom-text-content{
 		left: calc(5%);
 	}
+}
+
+
+/*Table Part*/
+
+.cui-table-fluid {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.cui-table {
+	border-radius: 20px;
+	padding: 15px 10px 15px 10px;
+}
+.cui-table thead{
+	color: #777;
+}
+.cui-table td{
+	position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 20px;
+  text-align: left;
+  vertical-align: middle;
+  border: 2px solid #F1F2F9;
+  border-radius: 1000px;
 }

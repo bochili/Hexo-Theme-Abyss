@@ -1,0 +1,100 @@
+<style>
+.load-container {
+  width:320px;
+  height: 180px;
+  position: fixed;
+  top:4%;
+  left: calc(50% - 160px);
+}
+.load-container .load-color {
+  height: 30px;
+}
+.load-container .load-color div {
+  height: 30px;
+  width: 0;
+  border-radius:1000px;
+}
+.load-container .load-color .load-red {
+  background: #e60847;
+  animation-name: slide;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+.load-container .load-color .load-orange {
+  background: #FEE357;
+  animation-name: slide;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+}
+.load-container .load-color .load-yellow {
+  background: #faefb1;
+  animation-name: slide;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.2s;
+}
+.load-container .load-color .load-green {
+  background: #3ef499;
+  animation-name: slide;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.3s;
+}
+.load-container .load-color .load-blue {
+  background: #15d2a3;
+  animation-name: slide;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.4s;
+}
+.load-container .load-color .load-purple {
+  background: #620ffb;
+  animation-name: slide;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes slide {
+  10% {
+    width: 0;
+    float: left;
+  }
+  37% {
+    width: 100%;
+    float: left;
+  }
+  63% {
+    width: 100%;
+    float: right;
+  }
+  90% {
+    width: 0;
+    float: right;
+  }
+}
+
+</style>
+<div id="bonfire-pageloader" class="cui-cover-light">
+  <div class="load-container">
+  	<div class="load-color">
+  		<div class="load-red"></div>
+  	</div>
+  	<div class="load-color">
+  		<div class="load-orange"></div>
+  	</div>
+  	<div class="load-color">
+  		<div class="load-yellow"></div>
+  	</div>
+  	<div class="load-color">
+  		<div class="load-green"></div>
+  	</div>
+  	<div class="load-color">
+  		<div class="load-blue"></div>
+  	</div>
+  	<div class="load-color">
+  		<div class="load-purple"></div>
+  	</div>
+   </div>
+</div>

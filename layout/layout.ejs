@@ -1,27 +1,6 @@
 <%- partial('_partial/head') %>
 <body class="cui-color-theme-<%= theme.theme_color %>" onload="changedTheme()" id="page">
-  <div id="bonfire-pageloader">
-  	<div class="load-container">
-  		<div class="load-color">
-  			<div class="load-red"></div>
-  		</div>
-  		<div class="load-color">
-  			<div class="load-orange"></div>
-  		</div>
-  		<div class="load-color">
-  			<div class="load-yellow"></div>
-  		</div>
-  		<div class="load-color">
-  			<div class="load-green"></div>
-  		</div>
-  		<div class="load-color">
-  			<div class="load-blue"></div>
-  		</div>
-  		<div class="load-color">
-  			<div class="load-purple"></div>
-  		</div>
-  	</div>
-  </div>
+  <%- partial('_loader/loader_switch') %>
   <div id="container">
     <div id="wrap">
       <%- partial('_partial/header', null, {cache: !config.relative_link}) %>

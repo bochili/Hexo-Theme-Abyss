@@ -51,6 +51,12 @@ input, button
 	height: 24px
 }
 
+.footer
+  text-align center
+  padding 50px
+.cui-color-theme-dark .footer
+  color #FFF
+
 @font-face {
 	font-family: 'Material Icons';
 	font-style: normal;
@@ -331,82 +337,6 @@ body
   z-index: 1
   .mobile-nav-on &
     left: mobile-nav-width
-
-.load-container {
-  width: 320px;
-  height: 180px;
-  position absolute
-  margin-top calc(25% - 90px)
-  left calc(50% - 160px)
-}
-.load-container .load-color {
-  height: 30px;
-}
-.load-container .load-color div {
-  height: 30px;
-  width: 0;
-  border-radius 1000px
-}
-.load-container .load-color .load-red {
-  background: #f25774;
-  animation-name: slide;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-}
-.load-container .load-color .load-orange {
-  background: #ffb65b;
-  animation-name: slide;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-delay: 0.1s;
-}
-.load-container .load-color .load-yellow {
-  background: #fdda74;
-  animation-name: slide;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-delay: 0.2s;
-}
-.load-container .load-color .load-green {
-  background: #4cbe5d;
-  animation-name: slide;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-delay: 0.3s;
-}
-.load-container .load-color .load-blue {
-  background: #4080ff;
-  animation-name: slide;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-delay: 0.4s;
-}
-.load-container .load-color .load-purple {
-  background: #7b64c0;
-  animation-name: slide;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-delay: 0.5s;
-}
-
-@keyframes slide {
-  10% {
-    width: 0;
-    float: left;
-  }
-  37% {
-    width: 100%;
-    float: left;
-  }
-  63% {
-    width: 100%;
-    float: right;
-  }
-  90% {
-    width: 0;
-    float: right;
-  }
-}
 
 if sidebar and sidebar isnt bottom
   #main

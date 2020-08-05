@@ -2,9 +2,20 @@
     <div class="widget">
       <div class="blogger">
           <a href="<%= theme.avatarjumpurl %>"><img class="blogger-avatar" src="<%= theme.avatar %>" /></a>
-          <div class="cui-typo-title"><a class="dol-text-color" href="<%- url_for() %>" style="text-decoration:none;"><%= config.title %></a></div>
+          <div class="cui-typo-title"><a class="dol-text-color" style="text-decoration:none;"><%= config.title %></a></div>
           <div class="blogger-motto"><%= theme.introduce %></div>
           <a href="<%= theme.followurl %>" target="_blank" class="cui-btn cui-color-theme cui-shadow-heavy-theme cui-btn-oval blogger-btn">Follow Me</a>
 	  </div>
     </div>
+</div>
+<% if ( theme.search ) { %>
+<div class="cui-dialog" id="dialog1-1">
+  <div class="cui-dialog-wrapper cui-typo cui-dialog-wrapper-hight-400">
+    <div id="site_search">
+      <input type="text" id="local-search-input" style="width: 100%;" results="0"/>
+      <div id="local-search-result"></div>
+    </div>
   </div>
+  <div class="cui-dialog-overlay cui-blur cui-cover-dark" cui-dialog="open1-1"></div>
+</div>
+<% } %>
