@@ -7,13 +7,47 @@
 
 .cui-color-theme-dark .article-inner
   background #2D3034
-  color #FFF
+  color #DDD
+  transition .3s all
 
+.article-sentence
+  background: #fff
+  color #4b4b4b
+.cui-color-theme-dark .article-sentence
+  background: #2D3034
+  color #DDDDDD
+  transition .3s all
+.article-sentence-meta
+  width 90%
+  margin 0 auto
+  margin-bottom 10px
+  color #6c7b90
+  font-size 16px
+  .article-date
+    margin-top -22px
+	font-size 14px
+    display inline-block
+.article-sentence-title
+  font-weight bold
+  border-bottom-left-radius 10px
+  border-bottom-right-radius 10px
+  padding 8px
+  background #f7f7f8
+  width 100px
+  text-align center
+.cui-color-theme-dark .article-sentence-title
+  background #3e3e48
+  color #ddd
+  display inline-block
+.article-sentence-content
+  padding 40px
+  padding-top 10px
+  font-weight bold
+  font-size 20px
 .article-date
   @extend $block-caption
   text-shadow none
   float: right
-
 .article-category
   float: left
   color: #ccc
@@ -29,6 +63,7 @@
 
 .cui-color-theme-dark .article-title
   color #FFF
+  transition .3s all
 
 .article-title
   text-decoration: none
@@ -47,7 +82,10 @@
   width 100%
   border-top-right-radius 35px
   border-top-left-radius 35px 
-  
+.cui-color-theme-dark img
+  -webkit-filter: brightness(70%); /* Chrome, Safari, Opera */
+  filter: brightness(70%);
+  transition .3s all
 .article-meta
   clearfix()
   padding-left article-padding

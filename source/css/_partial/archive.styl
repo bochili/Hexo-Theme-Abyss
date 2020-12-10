@@ -62,23 +62,37 @@
   a
     color: color-grey
     text-decoration: none
+    transition .3s all	
     &:hover
       border-radius: 1000px;
       box-shadow: 18px 18px 30px #d1d9e6, -18px -18px 30px #fff;
       transition .5s box-shadow
+    .cui-color-theme-dark &:hover
+      background: #2d3035
+      -webkit-box-shadow: 3px 5px 20px #212121, -8px -5px 30px #272a2b
+      box-shadow: 3px 5px 20px #212121, -8px -5px 30px #272a2b
+      transition .3s all
   .prev
     border-radius: 1000px;
   .next
     border-radius: 1000px;
   .current
-   // -webkit-box-shadow: 0 2px 4px -1px rgba(84, 147, 255, .2), 0 4px 5px 0 rgba(84, 147, 255, .14), 0 1px 10px 0 rgba(84, 147, 255, .12);
-    //box-shadow: 0 2px 4px -1px rgba(84, 147, 255, .2), 0 4px 5px 0 rgba(84, 147, 255, .14), 0 1px 10px 0 rgba(84, 147, 255, .12);
-    border-radius: 1000px;
     box-shadow: 18px 18px 30px #d1d9e6, -18px -18px 30px #fff;
+    box-shadow: 18px 18px 30px #d1d9e6, -18px -18px 30px #fff;
+    border-radius: 1000px
     font-weight: bold
+
   .space
     color: color-border
   .page-number
     margin-left:4px
     margin-top 6px
     border-radius: 1000px;
+
+.cui-color-theme-dark .current
+  -webkit-box-shadow: 3px 5px 20px #212121, -8px -5px 30px #272a2b!important
+  box-shadow: 3px 5px 20px #212121, -8px -5px 30px #272a2b!important
+  border-radius: 1000px
+  background: #2d3035
+  font-weight: bold
+  transition .3s all

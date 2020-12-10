@@ -4,9 +4,9 @@ Abyss主题是基于Landscape主题二次开发而成，使用了其中的网格
 
 这里我还要感谢所有为Abyss主题提出建议、发现Bug的各位，他们是Abyss主题设计开发过程中不可或缺的力量。
 
-![image](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/Abyss0.0.2.png)
+![image](https://cdn.jsdelivr.net/gh/bochili/fontscdn2/Abyss0.1.0.png)
 
-***文档对应的主题版本：Abyss 0.0.2.5***
+***文档对应的主题版本：Abyss 0.1.0***
 
 ## 示例：
 Bochi's Blog: [www.wanan.run](https://www.wanan.run)
@@ -34,6 +34,8 @@ theme_color: dark
 另外，0.0.2版本在侧边栏组件中新增了切换主题色的功能，此功能使用到了Cookie存储，因此引入了**预加载**，目前存在一个外观上的问题，在日后的版本更新中会将其修复。
 
 > 存在问题为：<br>① 用户在config中设置了默认的主题色，当电脑未读取到cookie时，将使用默认主题色。但是当浏览者切换了主题色，页面会先加载默认主题色，再读取cookie，加载新的主题色，中间的时间差是肉眼可见的，所以出现了切换页面时有一瞬间颜色不一致的情况。
+<br>②
+预加载阶段页面位置有问题。
 
 ## 顶部导航栏是否固定
 
@@ -42,17 +44,6 @@ theme_color: dark
 nav_fixed: true（默认为固定）
 ```
 这一行，将其改为false，则不跟页面移动。
-
-## 预加载动画
-因为我引用的预加载脚本的问题，所以它会预加载页面的所有内容，0.0.2.5临时改成了顶部的一个小条，可以防止它遮盖页面内容，影响操作。
-
-已存的预加载动画
-动画样式 | config中的对应名
----|---
-Win10转圈圈 | win10
-顶部小条 | loadbartop
-彩虹条条 | rainbow
-纯毛玻璃 | blur
 
 
 ## 侧边栏配置
@@ -134,7 +125,23 @@ excerpt_link_shadow的值为true或false，即开启或关闭按钮上的阴影�
 excerpt_link_shape: oval（默认为椭圆）
 excerpt_link_shadow: true（默认为开启阴影）
 ```
+## 单独页面
 
+在创建独立页面时，您可以在文件的Front-Matter处添加“**layout**”来赋予页面一个初始模板
+
+目前Abyss主题只提供了**tag**（标签展示）、**category**（分类展示）这两种模板，日后会陆续更新其他模板
+
+## 站内搜索
+
+Abyss主题提供了对 **hexo-generator-search** 搜索插件的支持，您只需要安装此插件即可开始使用搜索功能。
+
+安装命令为：
+
+```
+npm install hexo-generator-search --save
+```
+
+如果您不想开启搜索功能，请将主题config下的 search: **true** 改为 search: **false** 
 
 ## 文章Front-Matter
 下面是一个标准的Front-Matter示例：
@@ -162,6 +169,19 @@ banner: https://cdn.jsdelivr.net/gh/bochili/fontscdn2/40178663-5584-435E-B9BF-CA
 ### 首页文章列表大图
 添加**banner**项，值为图片外链。
 
+### 文章类型: PostType
+
+从 Abyss **0.1.0** 开始，引入了文章类型的概念，目前仅有“随心记”和普通文章两种样式，日后会陆续添加。如有建议欢迎提出。
+
+(注：“随心记”就是简短的几句话，而不是普通blog那样的有图片有文字有样式，可以用随心记的方式记录您一瞬间的想法或其他发生的事情。)
+
+如果您希望某篇文章已随心记的形式展示在首页，可以在文章的Front-Matter处填写：
+
+```
+posttype: sentence
+```
+不写即为默认样式
+
 ## 百度搜索资源平台
 config中代码如下
 enable为是否开启，baidu_site_verification为您在下图中找到的值：
@@ -177,12 +197,3 @@ valine:
   AppId: XXXXXXXXXX
   AppKey: XXXXXXXXXXX
 ```
-
-
-## Google AdSense
-
-此版本不开启，日后版本将可以正常使用。
-
-## Local Search
-
-此版本不开启，日后版本将可以正常使用。

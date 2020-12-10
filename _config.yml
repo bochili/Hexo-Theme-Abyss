@@ -11,7 +11,7 @@ rss: /atom.xml
 theme_color: o-apple
 loader: loadbartop
 loader_text: 海内存知己，天涯若比邻。<br>请稍候..
-search: false
+search: true
 #Navbar
 nav_fixed: true
 

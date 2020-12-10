@@ -1,21 +1,19 @@
 
   <% if (site.posts && site.posts.length > 0) { %>
     <% if (page.layout == 'category') { %>
-      <section class="post-list">
-        <div class='post-wrapper'>
-          <article id="archive-page" class="post article white-box">
+      <section>
+          <article class="article article-inner">
             <section class="archive">
-              <div class="article-title">
+              <div class="article-title cui-typo-h2" style="padding-left: 26px;padding-right: 26px;margin-top: 40px;">
                 <%- page.title %>
               </div>
-              <div>
+              <div style="padding-left: 26px;padding-right: 26px;margin-top: 15px;margin-bottom:20px;" >
                 <%- list_categories() %>
-              </div>
               <br>
               <%- page.content %>
+              </div>
             </section>
           </article>
-        </div>
       </section>
     <% } else { %>
       <%- partial('_partial/archive', {pagination: config.category, index: true}) %>

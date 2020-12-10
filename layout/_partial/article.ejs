@@ -1,6 +1,15 @@
 <article class="article animate__animated animate__zoomIn cui-typo article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-inner">
     <%- partial('post/gallery') %>
+    <% if (post.posttype == "sentence"){ %>
+	<div class="article-sentence">
+		<div class="article-sentence-meta">
+			<div class="article-sentence-title"><i class="mdui-icon material-icons">&#xe0c9;</i>&nbsp; 随心记</div>
+			<div class="article-sentence-date"><%- partial('post/date', {class_name: 'article-date', date_format: null}) %></div>
+		</div>
+		<div class="article-sentence-content"><%- post.content %></div>
+	</div>
+	<% } else { %>
     <% if (post.link || post.title){ %>
       <header class="article-header">
 	  <%- partial('post/banner', {class_name: 'article-banner'}) %>
@@ -41,6 +50,7 @@
 	<% } else { %>
 	<% } %>
   </div>
+  <% } %>
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>

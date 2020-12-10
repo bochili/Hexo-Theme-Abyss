@@ -5,8 +5,10 @@ else
 .cui-color-theme-dark .widget
   background #2D3034
   color #FFF
+  transition .3s all
 .cui-color-theme-dark .widget-title
   color #FFF
+  transition .3s all
 .widget
   line-height: line-height
   word-wrap: break-word
@@ -120,3 +122,45 @@ a.dol-text-color
   color #2e2f3c
 .cui-color-theme-dark .dol-text-color
   color #FFF
+  transition .3s all
+.search-frame
+  width 80%
+  margin auto
+input#local-search-input
+  height: 40px;
+  transition all .5s ease-in-out
+  border-radius 1000px
+  border none
+  color #2E2F3C
+  margin-top 10px
+  text-indent 20px
+  background #f2f2f7
+input#local-search-input:focus
+  border-radius 1000px
+#local-search-result a
+  text-decoration none
+  font-size 20px
+  color #2E2F3C
+#local-search-result
+  width 80%
+  margin auto
+.search-result-item
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+.cui-color-theme-dark input#local-search-input
+  background #3e3e48
+.cui-color-theme-dark input#local-search-input,.cui-color-theme-dark .search-result-item,.cui-color-theme-dark #local-search-result a
+  color #DDD
+.search-result
+  color: #8195b2;
+  margin-top 5px
+.search-line
+  background #2E2F3C
+  width 80px
+  height 4px
+  margin auto
+  margin-top 20px
+  border-radius 1000px
+.cui-color-theme-dark .search-line
+  background #DDD
